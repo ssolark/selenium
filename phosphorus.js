@@ -170,7 +170,7 @@ var P = (function() {
 
   var IO = {};
 
-  IO.PROJECT_URL = 'https://projects.scratch.mit.edu/internalapi/project/';
+  IO.PROJECT_URL = 'https://projects.scratch.mit.edu/';
   IO.ASSET_URL = 'https://cdn.assets.scratch.mit.edu/internalapi/asset/';
   IO.SOUNDBANK_URL = 'https://cdn.rawgit.com/LLK/scratch-flash/v429/src/soundbank/';
 
@@ -254,7 +254,7 @@ var P = (function() {
     IO.init(request);
 
     request.defer = true;
-    var url = IO.PROJECT_URL + id + '/get/';
+    var url = IO.PROJECT_URL + id;
     request.add(IO.load(url).onLoad(function(contents) {
       try {
         var json = IO.parseJSONish(contents);
